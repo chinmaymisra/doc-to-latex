@@ -14,8 +14,7 @@ def list_to_csv(li,colname,subname):
         colname (string): name of college
         subname (string): name of subject
     """
-    list1 = [1,2,3,4,5]
-    df = pd.DataFrame(list1)
+    df = pd.DataFrame(li)
     df.to_csv('errors_'+colname+"_"+subname+'.csv', index=False)
 
 
@@ -60,9 +59,9 @@ def doc_to_excel(path):
     errors=[]
     for i in range(1,size-1):
         temp=l[i].split("&")
-        print(temp)
+        qno=temp[0]
         temp.pop(0)
-        print(temp)
+        
         if len(temp)==6:
             temp.insert(1,"")
             temp.insert(2,"")
@@ -87,7 +86,7 @@ def doc_to_excel(path):
             print(temp)
             main.append(temp)
         else:
-            errors.append("Question no: "+temp[0])
+            errors.append("Question no: "+qno)
 
     #creates dataframe of the extracted table data        
     df=pd.DataFrame(main,columns=column_names)
@@ -95,11 +94,11 @@ def doc_to_excel(path):
     #if error occured anywhere then saves the source latex file and a csv containing questions that have error
     if len(errors)>0:
         temps=college_name+"_"+subject_name+".tex"
-        output2 = pypandoc.convert_file(path, 'latex', outputfile=temps)
+        #output2 = pypandoc.convert_file(path, 'latex', outputfile=temps)
         list_to_csv(errors,college_name,subject_name)
     
     #converts dataframe to excel format
-    df.to_excel(college_name+"_"+subject_name+".xlsx",index=False)
+    #df.to_excel(college_name+"_"+subject_name+".xlsx",index=False)
 
 
     return errors 
