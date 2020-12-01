@@ -8,19 +8,16 @@ HOW TO USE:-
 
 1)Install all dependencies
 
-	a)pandas 
-		pip install pandas	
-	b)docx2txt
-		pip install docx2txt
-	c)regex
-		pip install regex
-	d)docx 
-		pip install python-docx
-	e)pypandoc
-		pip install pypandoc
-	f)tkinter
-	g)os
-
+	a)tkinter(8.6.8)
+	b)pandas(0.25.1)
+	c)docx2txt(0.8)
+	d)regex(2020.10.28)
+	e)docx (0.2.4) (called python-docx)
+	f)pypandoc(1.5)
+	g)pandoc(2.0a5)
+	IMP:-
+	pls run the below command at the end,current pandas installation installs numpy(1.19.4) by default which causes compatibility issues with pypandoc.
+	"pip install numpy==1.19.3"
 
 2)Run "converter.py".GUI should open up.
 

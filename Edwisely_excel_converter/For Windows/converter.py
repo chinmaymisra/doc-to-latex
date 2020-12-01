@@ -11,8 +11,6 @@ from tkinter.filedialog import askdirectory
 
 import os
 
-
-
 def parse_folder(directory):
     if directory=="ERROR" or directory =="":
         popup = tk.Tk()

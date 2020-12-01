@@ -6,6 +6,54 @@
 
 HOW TO USE:-
 
+NOTE:- Method 1 is a bit complex but foolproof and while Method 2 is less tedious it may not work on some systems.
+
+METHOD-1:
+
+1)Install Python,pls follow online instructions, don't forget to add to path.
+(Link for adding python to path :- https://www.educative.io/edpresso/how-to-add-python-to-path-variable-in-windows, create a new environment variable
+called Pythonpath with the same value as well.)
+
+(Python 3.7.9 was used when creating this application, no errors have been encountered with newer builds of python but in case of encountering
+some module incompatibility issue first try with a this older build of python before reporting the issue)
+
+https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe(for 64 bit machines)
+
+2)Press Windows+R to open CMD 
+
+
+3)Install the following modules using Pip(pip is a python package installer):-
+	
+	use command:"pip install <package name>==<version>"
+	
+	a)tkinter(8.6.8)
+	b)pandas(0.25.1)
+	c)docx2txt(0.8)
+	d)regex(2020.10.28)
+	e)docx (0.2.4)
+	f)pypandoc(1.5)
+	g)pandoc(2.0a5)
+
+	IMP:-
+	pls run the below command at the end,current pandas installation installs numpy(1.19.4) by default which causes compatibility issues with pypandoc.
+	"pip install numpy==1.19.3"
+
+4)Change directory to the directory of the "converter.py" file using "cd" command
+
+5)Run "python converter.py" in CMD.Application should open.
+
+6)Click on "Select Folder" button.
+
+7)Select the folder where you have stored all the docx files which need conversion.
+
+8)Hit "Convert".
+
+9)Watch magic happen :)
+				
+					OR
+
+METHOD-2:
+
 1)Go to "dist" folder.
 
 2)Click on "converter.exe".
@@ -17,6 +65,8 @@ HOW TO USE:-
 5)Hit "Convert".
 
 6)Watch magic happen :)
+
+
 
 
 NOTE:- 	There is a specific format for the input docx files,
