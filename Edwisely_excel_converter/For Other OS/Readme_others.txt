@@ -15,6 +15,8 @@ HOW TO USE:-
 	e)docx (0.2.4) (called python-docx)
 	f)pypandoc(1.5)
 	g)pandoc(2.0a5)
+	h)openpyxl(3.0.5)
+
 	IMP:-
 	pls run the below command at the end,current pandas installation installs numpy(1.19.4) by default which causes compatibility issues with pypandoc.
 	"pip install numpy==1.19.3"

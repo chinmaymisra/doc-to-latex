@@ -24,16 +24,20 @@ https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe(for 64 bit machin
 
 3)Install the following modules using Pip(pip is a python package installer):-
 	
+	3.1) Install Pandoc using the pandoc 2.11.2 installer provided.
+	
 	use command:"pip install <package name>==<version>"
 	
+	3.2) 
+
 	a)tkinter(8.6.8)
 	b)pandas(0.25.1)
 	c)docx2txt(0.8)
 	d)regex(2020.10.28)
 	e)docx (0.2.4)
 	f)pypandoc(1.5)
-	g)pandoc(2.0a5)
-
+	g)openpyxl(3.0.5)
+	
 	IMP:-
 	pls run the below command at the end,current pandas installation installs numpy(1.19.4) by default which causes compatibility issues with pypandoc.
 	"pip install numpy==1.19.3"
@@ -49,6 +53,8 @@ https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe(for 64 bit machin
 8)Hit "Convert".
 
 9)Watch magic happen :)
+
+*IMP NOTE:- METHOD-1 is a first time only method,once you have done METHOD-1 one time then from next time you can follow METHOD-2 without fail.*
 				
 					OR
 
